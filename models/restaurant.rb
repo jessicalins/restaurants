@@ -36,7 +36,7 @@ class Restaurant
 
 		restaurants_array.each do |restaurant|
 			restaurant_distance_hash = {}
-			distance = Geocoder::Calculations.distance_between([restaurant.latitude, restaurant.longitude], centroid)
+			distance = Geocoder::Calculations.distance_between([restaurant.latitude,restaurant.longitude], centroid)
 			restaurant_distance_hash[:distance] = distance
 			restaurant_distance_hash[:restaurant] = restaurant
 			restaurants_distances.push(restaurant_distance_hash)
